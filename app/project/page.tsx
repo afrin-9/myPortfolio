@@ -5,7 +5,7 @@ import Marquee from "../components/Marquee";
 import Navbar from "../components/NavBar";
 import RadialBackground from "../components/RadialBackground";
 import ServicesSection from "../components/ServiceSection";
-import ShowcaseGrid from "../components/ShowcaseGrid";
+import ShowcaseGrid from "../components/project/ShowcaseGrid";
 import StarCanvas from "../components/StarCanvas";
 import BackToTop from "../components/toptobottom";
 

@@ -1,15 +1,16 @@
 // components/ShowcaseGrid.tsx
 "use client";
+import { projects } from "@/app/data/portfolioData";
 import { motion } from "framer-motion";
-import ShowcaseCard from "./ShowcaseCard";
-import { projects } from "../data/portfolioData";
+import ShowcaseCard from "../ShowcaseCard";
 
-const items = projects.slice(0, 4).map((project) => ({
+const items = projects.map((project) => ({
   title: project.title,
   tags: project.technologies,
   image: project.image ?? "",
   github: project.github,
 }));
+
 
 export default function ShowcaseGrid() {
   return (
