@@ -19,16 +19,16 @@ export default function StarCanvas() {
       H = canvas.height = window.innerHeight;
     };
 
- const makeStar = () => ({
-  x: Math.random() * W,
-  y: Math.random() * H,
-  r: Math.random() * 1.4 + 0.3,
-  alpha: Math.random() * 0.7 + 0.2,
-  speed: Math.random() * 1.5 + 0.3,      // faster vertical speed (50–120)
-  pulse: Math.random() * Math.PI * 2,
-  pulseSpeed: Math.random() * 0.2 + 0.1, // slightly faster twinkling
-  drift: (Math.random() - 0.5) * 2.0,  // faster horizontal drift
-});
+    const makeStar = () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 1.4 + 0.3,
+      alpha: Math.random() * 0.7 + 0.2,
+      speed: Math.random() * 1.5 + 0.3,
+      pulse: Math.random() * Math.PI * 2,
+      pulseSpeed: Math.random() * 0.015 + 0.005,
+      drift: (Math.random() - 0.5) * 0.08,
+    });
 
     const init = () => {
       stars = Array.from({ length: N }, makeStar);
