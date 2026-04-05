@@ -24,7 +24,7 @@ export default function StarCanvas() {
       y: Math.random() * H,
       r: Math.random() * 1.4 + 0.3,
       alpha: Math.random() * 0.7 + 0.2,
-      speed: Math.random() * 1.5 + 0.3,
+      speed: Math.random() * 0.8 + 0.3,
       pulse: Math.random() * Math.PI * 2,
       pulseSpeed: Math.random() * 0.015 + 0.005,
       drift: (Math.random() - 0.5) * 0.08,
@@ -34,13 +34,19 @@ export default function StarCanvas() {
       stars = Array.from({ length: N }, makeStar);
     };
 
-    const draw = () => {
+    let lastTime = 0;
+    let rafId: number;
+
+    const draw = (timestamp: number) => {
+      const delta = Math.min((timestamp - lastTime) / 16.67, 3); // normalize to 60fps
+      lastTime = timestamp;
+
       ctx.clearRect(0, 0, W, H);
 
       stars.forEach((s) => {
-        s.pulse += s.pulseSpeed;
-        s.x += s.drift;
-        s.y -= s.speed;
+        s.pulse += s.pulseSpeed * delta;
+        s.x += s.drift * delta;
+        s.y -= s.speed * delta;
 
         if (s.y < -4) {
           s.y = H + 4;
@@ -55,17 +61,20 @@ export default function StarCanvas() {
         ctx.fill();
       });
 
-      requestAnimationFrame(draw);
+      rafId = requestAnimationFrame(draw);
     };
 
     resize();
     init();
-    draw();
+    rafId = requestAnimationFrame(draw);
 
-    window.addEventListener("resize", () => {
-      resize();
-      init();
-    });
+    const onResize = () => { resize(); init(); };
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
 
   return (
