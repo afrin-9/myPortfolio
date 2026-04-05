@@ -17,7 +17,6 @@ const fadeUp = (delay: number) => ({
 const ROLES = [
   "UI/UX Designer",
   "Mobile App Developer",
-  "CSE Student",
 ];
 
 function TypingRole() {
@@ -26,7 +25,7 @@ function TypingRole() {
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const current = ROLES[roleIndex];
+    const current = ROLES[roleIndex % ROLES.length];
     let timeout: ReturnType<typeof setTimeout>;
 
     if (!deleting && displayed.length < current.length) {

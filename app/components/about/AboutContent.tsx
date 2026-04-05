@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function AboutContent() {
   return (
-    <div className="flex gap-10 items-center mt-10 mr-10 ml-10">
+    <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-center mt-10 mx-4 md:mx-10">
       {/* image — slides in from left */}
       <motion.div
-        className="w-2/5 flex flex-col justify-center"
+        className="w-full md:w-2/5 flex flex-col justify-center"
         initial={{ opacity: 0, x: -80 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
@@ -25,7 +25,7 @@ export default function AboutContent() {
       </motion.div>
 
       {/* content boxes — slide in from right, staggered */}
-      <div className="w-3/5 flex flex-col gap-6">
+      <div className="w-full md:w-3/5 flex flex-col gap-6">
         {[
           {
             title: "Skilled Professional",

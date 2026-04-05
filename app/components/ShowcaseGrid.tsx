@@ -13,9 +13,9 @@ const items = projects.slice(0, 4).map((project) => ({
 
 export default function ShowcaseGrid() {
   return (
-    <main className="min-h-screen  text-white p-10">
-      <h1 className="text-4xl font-bold mb-10">Design Showcase</h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mr-10">
+    <main className="min-h-screen text-white px-4 md:px-10 py-10">
+      <h1 className="text-2xl md:text-4xl font-bold mb-6 md:mb-10">Design Showcase</h1>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
       {items.map((item, i) => (
         <motion.div
           key={i}

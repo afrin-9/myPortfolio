@@ -7,10 +7,10 @@ const Resume = () => {
 
   return (
     <section id="resume" className="py-16 px-6 md:px-20 text-white">
-      <h2 className="text-3xl font-bold mb-8 text-green-700">My Resume</h2>
+      <h2 className="text-3xl font-bold mb-8">My Resume</h2>
 
       {/* Buttons */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mr-150 mb-10">
+      <div className="flex flex-wrap gap-4 mb-10">
 
       
       <div
@@ -43,7 +43,7 @@ const Resume = () => {
       </div>
 </div>
       {/* PDF Viewer */}
-      <div className="w-full h-[600px] border border-gray-700 rounded-xl overflow-hidden">
+      <div className="w-full h-100 md:h-150 border border-gray-700 rounded-xl overflow-hidden">
         <embed
           src={resumeUrl}
           type="application/pdf"

@@ -2,8 +2,8 @@
 
 export default function AboutHeader() {
   return (
-    <div className="m-10">
-      <h1 className="text-4xl font-bold mb-2">About Me</h1>
+    <div className="mx-4 md:mx-10 mt-6 md:mt-10">
+      <h1 className="text-2xl md:text-4xl font-bold mb-2">About Me</h1>
    </div>
   );
 }
