@@ -13,13 +13,13 @@ export default function ServiceCard({
   features,
 }: ServiceProps) {
   return (
-    <div className="rounded-3xl bg-gradient-to-br from-green-500/40 via-transparent to-transparent hover:scale-[1.02] hover:shadow-green-900 shadow-lg hover:border hover:border-t-3 transition duration-300 border-t-3 border-green-600/40 mr-50 ">
+    <div className="rounded-3xl bg-gradient-to-br from-green-500/40 via-transparent to-transparent hover:scale-[1.02] hover:shadow-green-900 shadow-lg hover:border hover:border-t-3 transition-transform duration-300 border-t-3 border-green-600/40 ">
       <div className=" bg-gradient-to-r from-black to-[#162c23] rounded-3xl p-8 h-full ">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-400 mb-6">{description}</p>
 
         {/* tools */}
-        <div className="flex gap-3 mb-6">
+        <div className="flex flex-wrap gap-3 mb-6">
           {tools.map((tool, i) => (
             <span
               key={i}

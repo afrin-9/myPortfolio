@@ -9,7 +9,7 @@ export default function AboutContent() {
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         className="mb-5 flex flex-col gap-4"
       >
           <h1 className="text-2xl md:text-4xl font-bold mb-2">About Me</h1>
@@ -20,7 +20,7 @@ export default function AboutContent() {
         className="w-full md:w-2/5 flex flex-col justify-center"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="w-full flex items-center justify-center">
           <Image
@@ -28,7 +28,7 @@ export default function AboutContent() {
             alt="about"
             width={300}
             height={300}
-            className="object-cover w-84 h-84 rounded-lg border-2 border-green-500/20 shadow-lg shadow-green-500/20 hover:scale-105 transition"
+            className="object-cover w-84 h-84 rounded-lg border-2 border-green-500/20 shadow-lg shadow-green-500/20 hover:scale-105 transition-transform"
           />
         </div>
       </motion.div>
@@ -92,7 +92,7 @@ export default function AboutContent() {
             className="bg-[#0b0f0e] border border-green-500/20 rounded-2xl p-6 border-t-3 "
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.15 * (i + 1) }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.1 * (i + 1) }}
           >
             <h2 className="text-xl font-semibold mb-4">{card.title}</h2>
             {card.body}

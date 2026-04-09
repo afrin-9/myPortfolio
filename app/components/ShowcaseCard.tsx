@@ -19,7 +19,7 @@ export default function ShowcaseCard({ title, tags, image, github }: Props) {
             alt={title}
             width={400}
             height={400}
-            className="object-cover w-full h-100 group-hover:scale-105 transition duration-500"
+            className="object-cover w-full h-100 group-hover:scale-105 transition-transform duration-500"
           />
         </div>
 
