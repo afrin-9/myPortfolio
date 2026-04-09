@@ -11,13 +11,13 @@ github: string;
 
 export default function ShowcaseCard({ title, tags, image, github }: Props) {
   return (
-    <div className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 p-[1px] hover:scale-[1.02] transition">
-      <div className="bg-gradient-to-r from-[#0a110e] to-[#162c23] rounded-3xl p-4 h-full  shadow-lg hover:shadow-green-500/20 hover:border-2 hover:border-green-500/20 hover:scale-105 transition rounded-3xl p-6">
+    <div className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800  border-green-500/40 hover:shadow-green-900 shadow-lg hover:border hover:border-green-500/20 hover:scale-105 transition">
+      <div className="bg-gradient-to-r from-[#0a110e] to-[#162c23] rounded-3xl p-4 h-full border-green-500/40 hover:shadow-green-900 shadow-lg hover:border hover:p-8 hover:border-green-500/20  hover:scale-105 transition">
         <div className="rounded-2xl overflow-hidden mb-5">
           <Image
             src={image}
             alt={title}
-            width={700}
+            width={400}
             height={400}
             className="object-cover w-full h-100 group-hover:scale-105 transition duration-500"
           />

@@ -3,9 +3,10 @@ import { image } from "framer-motion/client";
 export const personalInfo = {
   name: "Sadia Afrin",
   phone: "+8801992099240",
-  email: "sadiaafrin21@iut-dhaka.edu",
+  email: "afrin.iut@gmail.com",
   linkedin: "https://www.linkedin.com/in/sadia-afrin-7229bb2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   github: "https://github.com/afrin-9",
+  portfolio:"https://sadiaafrin.me",
 };
 
 export const professionalSummary = `
@@ -96,4 +97,46 @@ AR-based property discovery app integrating AR and AI to enhance real estate sea
       github: "https://github.com/afrin-9/Cross-Lingual-Information-Retrieval-System",
         image: "/I.png",
   }
+];
+
+export const services = [
+  {
+    title: "Complete website",
+    description:
+      "Scalable custom website design in Figma and development in Next.js",
+    tools: ["Figma"],
+    features: [
+      "Figma ",
+      "Multi-page",
+      "SEO Optimization",
+      "CMS setup",
+      "Responsive",
+      "Design + Development",
+    ],
+  },
+  {
+    title: "UI UX Design",
+    description: "Looking to design a web or app product?",
+    tools: ["Figma"],
+    features: [
+      "User research",
+      "Wireframing & Prototyping",
+      "Design system",
+      "Visual UI design",
+      "Design only",
+    ],
+  },
+  {
+    title: "Mobile App Design",
+    description: "Clean mobile UI that delivers value on every device",
+    tools: ["Figma"],
+    features: ["Multi-page", "Design system", "App prototype"],
+  },
+   {
+    title: "Web Development",
+    description: "Custom web applications built with the MERN stack",
+    tools: ["MongoDB", "Express", "React", "Node.js"],
+    features: ["API integration", "Database architecture", "Authentication", "Deployment-ready"],
+  },
+  
 ];

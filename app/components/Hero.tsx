@@ -52,7 +52,7 @@ function TypingRole() {
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center text-center mt-24 relative z-10 px-4 md:px-0 overflow-hidden">
+    <section className="flex flex-col items-center text-center mt-50 relative z-10 px-4 md:px-0 overflow-hidden">
 
       {/* Glowing orb background accent */}
       <div

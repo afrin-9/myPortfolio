@@ -1,6 +1,8 @@
 // components/ServicesSection.tsx
+"use client";
 
 import ServiceCard from "./ServiceCard";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -41,7 +43,7 @@ const services = [
     tools: ["MongoDB", "Express", "React", "Node.js"],
     features: ["API integration", "Database architecture", "Authentication", "Deployment-ready"],
   },
-  
+
 ];
 
 export default function ServicesSection() {
@@ -51,11 +53,17 @@ export default function ServicesSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mx-4 md:mx-10">
         {services.map((service, i) => (
-          <ServiceCard key={i} {...service} />
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <ServiceCard {...service} />
+          </motion.div>
         ))}
       </div>
     </section>
   );
 }
-
-

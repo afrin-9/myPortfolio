@@ -1,6 +1,8 @@
 // components/ServicesSection.tsx
+"use client";
 
 import ServiceCard from "./ServiceCard";
+import { motion } from "framer-motion";
 
 
 
@@ -49,20 +51,27 @@ const services = [
     tools: ["React Native", "Flutter"],
     features: ["Cross-platform UI", "Performance optimization", "App store readiness"],
   },
-  
+
 ];
 
 export default function ServicesSection() {
   return (
     <section className="mt-20">
       <h2 className="text-3xl font-bold mb-10 ml-20 text-green-700">How can I help</h2>
-      <div className="w-full flex flex-col mx-30 mr-20 items-center gap-8">
+      <div className="w-full flex flex-col mx-30 mr-50 items-center gap-8">
         {services.map((service, i) => (
-          <ServiceCard key={i} {...service} />
+          <motion.div
+            key={i}
+            className="w-full"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <ServiceCard {...service} />
+          </motion.div>
         ))}
       </div>
     </section>
   );
 }
-
-

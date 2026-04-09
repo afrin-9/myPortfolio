@@ -15,11 +15,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="relative z-50 flex justify-end items-center px-6 md:px-12 py-4 md:py-6">
-
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-end items-center px-6 md:px-12 py-2 md:py-6 ">
       {/* Desktop pill nav */}
       <div
-        className="hidden md:flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2"
+        className="hidden md:flex items-center gap-2 bg-black border border-white/10 rounded-full px-4 py-2"
         style={{ boxShadow: `0 0 18px ${COLORS.greenGlow}` }}
       >
         {navLinks.map((item, i) => (

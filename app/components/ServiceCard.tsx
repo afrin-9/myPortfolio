@@ -13,7 +13,7 @@ export default function ServiceCard({
   features,
 }: ServiceProps) {
   return (
-    <div className="w-full mr-15 rounded-3xl p-px bg-linear-to-br from-green-500/40 via-transparent to-transparent hover:scale-[1.02] transition duration-300 border-t border-green-500/40">
+    <div className="w-full mr-15 rounded-3xl p-px bg-linear-to-br from-green-500/40 via-transparent to-transparent hover:scale-[1.02] transition duration-300 border-t border-green-500/40 hover:shadow-green-900 shadow-lg hover:border hover:border-t-3">
       <div className="bg-linear-to-r from-black to-[#162c23] rounded-3xl p-4 md:p-8 h-full">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-400 mb-6">{description}</p>

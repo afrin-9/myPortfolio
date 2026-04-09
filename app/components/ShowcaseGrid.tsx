@@ -19,10 +19,10 @@ export default function ShowcaseGrid() {
       {items.map((item, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0, y: 100, rotate: -5 }}
+          initial={{ opacity: 0, y: 50, rotate: -6 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: i * 0.2 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
           <ShowcaseCard {...item} />
         </motion.div>

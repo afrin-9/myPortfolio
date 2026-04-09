@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
 
 const Frameworks = () => {
   const frameworks = [
@@ -19,12 +21,16 @@ const Frameworks = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {frameworks.map((fw, index) => (
-          <div
+          <motion.div
             key={index}
-            className="flex items-center justify-center bg-gradient-to-t from-[#0a110e] to-[#162c23] rounded-2xl p-6 h-full  shadow-lg hover:shadow-green-500/20 hover:border-2 hover:border-green-500/20 hover:scale-105 transition"
+            initial={{ opacity: 0, y: -35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.55, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
+            className="flex items-center justify-center bg-gradient-to-t from-[#0a110e] to-[#162c23] rounded-2xl p-6 h-full  shadow-lg hover:shadow-green-500/20 hover:border-2 hover:border-green-500/20 border-green-600/20 hover:scale-105 transition"
           >
             {fw}
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

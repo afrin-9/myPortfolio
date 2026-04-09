@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const skills = [
@@ -12,12 +14,16 @@ const Skills = () => {
 
       <div className="flex flex-wrap gap-3">
         {skills.map((skill, index) => (
-          <span
+          <motion.span
             key={index}
-            className="bg-gradient-to-t from-[#0a110e] to-[#162c23] rounded-3xl p-4 h-full  shadow-lg hover:shadow-green-500/20 hover:border-2 hover:border-green-500/20 hover:scale-105 transition"
+            initial={{ opacity: 0, x:-35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.55, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
+            className="bg-gradient-to-t from-[#0a110e] to-[#162c23] rounded-3xl p-4 h-full  shadow-lg hover:shadow-green-500/20 hover:border-2 border-green-600/20 hover:border-green-500/20 hover:scale-105 transition"
           >
             {skill}
-          </span>
+          </motion.span>
         ))}
       </div>
     </section>

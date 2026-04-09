@@ -1,35 +1,14 @@
-// "use client";
-
-// const projects = [
-//   "BrandFlow Studio",
-//   "Nora App",
-//   "Luminary Dashboard",
-//   "Skyline Rebrand",
-// ];
-
-// export default function Marquee() {
-//   return (
-//     <div className="overflow-hidden border-y border-green-500/20 py-4">
-//       <div className="flex gap-10 animate-[marquee_20s_linear_infinite] whitespace-nowrap">
-//         {[...projects, ...projects].map((item, i) => (
-//           <div key={i} className="text-sm text-gray-400 uppercase">
-//             ● {item}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
 "use client";
 
 const items = [
-  "Framer Website",
+  "Website Design",
   "App Design",
   "Product Design",
   "Research",
   "UI Design",
   "UX Design",
+  "Mobile Application Development",
+  "Web Development",
 ];
 
 export default function Marquee() {

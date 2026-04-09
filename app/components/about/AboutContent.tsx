@@ -9,9 +9,9 @@ export default function AboutContent() {
       {/* image — slides in from left */}
       <motion.div
         className="w-full md:w-2/5 flex flex-col justify-center"
-        initial={{ opacity: 0, x: -80 }}
+        initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="w-full flex items-center justify-center">
           <Image
@@ -19,13 +19,13 @@ export default function AboutContent() {
             alt="about"
             width={300}
             height={300}
-            className="object-cover w-84 h-84 rounded-lg border-4 border-green-500/20 shadow-lg hover:scale-105 transition"
+            className="object-cover w-84 h-84 rounded-lg border-2 border-green-500/20 shadow-lg shadow-green-500/20 hover:scale-105 transition"
           />
         </div>
       </motion.div>
 
       {/* content boxes — slide in from right, staggered */}
-      <div className="w-full md:w-3/5 flex flex-col gap-6">
+      <div className="w-full md:w-3/5 flex flex-col gap-6 ">
         {[
           {
             title: "Skilled Professional",
@@ -80,10 +80,10 @@ export default function AboutContent() {
         ].map((card, i) => (
           <motion.div
             key={i}
-            className="bg-[#0b0f0e] border border-green-500/20 rounded-2xl p-6"
-            initial={{ opacity: 0, x: 80 }}
+            className="bg-[#0b0f0e] border border-green-500/20 rounded-2xl p-6 border-t-3 "
+            initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 * (i + 1) }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.1 * (i + 1) }}
           >
             <h2 className="text-xl font-semibold mb-4">{card.title}</h2>
             {card.body}
