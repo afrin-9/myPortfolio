@@ -5,6 +5,15 @@ import Image from "next/image";
 
 export default function AboutContent() {
   return (
+    <section id="about" className="py-16 px-6 pt-30 md:px-20 text-white">
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        className="mb-5 flex flex-col gap-4"
+      >
+          <h1 className="text-2xl md:text-4xl font-bold mb-2">About Me</h1>
+      </motion.div>
     <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-center mt-10 mx-4 md:mx-10">
       {/* image — slides in from left */}
       <motion.div
@@ -83,7 +92,7 @@ export default function AboutContent() {
             className="bg-[#0b0f0e] border border-green-500/20 rounded-2xl p-6 border-t-3 "
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.1 * (i + 1) }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.15 * (i + 1) }}
           >
             <h2 className="text-xl font-semibold mb-4">{card.title}</h2>
             {card.body}
@@ -91,5 +100,6 @@ export default function AboutContent() {
         ))}
       </div>
     </div>
+    </section>
   );
 }

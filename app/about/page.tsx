@@ -1,5 +1,4 @@
 import AboutContent from "../components/about/AboutContent";
-import AboutHeader from "../components/about/AboutHeader";
 import Frameworks from "../components/about/framework";
 import Projects from "../components/about/project";
 import ServicesSection from "../components/about/ServiceSection";
@@ -16,7 +15,6 @@ export default function AboutPage() {
         <RadialBackground />
               <StarCanvas />
               <Navbar />
-      <AboutHeader />
       <AboutContent />
        <Skills />
       <Frameworks />

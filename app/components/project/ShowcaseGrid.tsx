@@ -44,7 +44,7 @@ export default function ShowcaseGrid() {
           Project Showcase
         </h1>
       </motion.div>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mr-10 height-100 width-100">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mr-10">
       {items.map((item, i) => (
         <motion.div
           key={i}
