@@ -58,7 +58,7 @@ export default function ServicesSection() {
   return (
     <section className="mt-20">
       <h2 className="text-3xl font-bold mb-10 ml-20 text-green-700">How can I help</h2>
-      <div className="flex flex-col mx-20 items-center gap-8">
+      <div className="flex flex-col mx-10 md:mx-20 items-center gap-8">
         {services.map((service, i) => (
           <motion.div
             key={i}

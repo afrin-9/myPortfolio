@@ -13,12 +13,13 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.9, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.9, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="bg-gradient-to-r from-black to-[#162c23] rounded-3xl p-8 h-full  shadow-lg hover:shadow-green-500/20 hover:border-2 border-green-600/20 hover:border-green-500/20 hover:scale-105 transition-transform"
           >
+        <Link href={project.github} target="_blank">
             <h3 className="text-xl font-semibold text-white mb-2">
               {project.title}
             </h3>
@@ -36,12 +37,11 @@ const Projects = () => {
               ))}
             </div>
             <div className="flex justify-end mt-4">
-              <Link href={project.github} target="_blank">
-                <button className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-green-600/20 hover:border-2 hover:border-green-500/20  transition">
+                {/* <button className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-green-600/20 hover:border-2 hover:border-green-500/20  transition">
                   ↗
-                </button>
-              </Link>
+                </button> */}
             </div>
+              </Link>
           </motion.div>
         ))}
       </div>
