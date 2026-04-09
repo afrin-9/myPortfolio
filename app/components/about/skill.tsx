@@ -20,7 +20,8 @@ const Skills = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.9, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-gradient-to-t from-[#0a110e] to-[#162c23] rounded-3xl p-4 h-full  shadow-lg hover:shadow-green-500/20 hover:border-2 border-green-600/20 hover:border-green-500/20 hover:scale-105 transition-transform"
+            style={{ willChange: "transform, opacity" }}
+            className="bg-gradient-to-t from-[#0a110e] to-[#162c23] rounded-3xl p-4 h-full shadow-lg hover:shadow-green-500/20 hover:border-2 border-green-600/20 hover:border-green-500/20 md:hover:scale-105 transition-transform"
           >
             {skill}
           </motion.span>
