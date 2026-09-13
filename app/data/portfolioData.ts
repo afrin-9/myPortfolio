@@ -3,7 +3,7 @@ import { image } from "framer-motion/client";
 export const personalInfo = {
   name: "Sadia Afrin",
   phone: "+8801992099240",
-  email: "afrin.iut@gmail.com",
+  email: "sadiaafrin21@iut-dhaka.edu",
   linkedin: "https://www.linkedin.com/in/sadia-afrin-7229bb2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   github: "https://github.com/afrin-9",
   portfolio:"https://sadiaafrin.me",
