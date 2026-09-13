@@ -2,6 +2,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { education } from "@/app/data/portfolioData";
 
 export default function AboutContent() {
   return (
@@ -42,6 +43,7 @@ export default function AboutContent() {
               <p className="text-lg leading-relaxed max-w-4xl">
                 Enthusiastic Computer Science student and versatile developer with hands-on experience in{" "}
                 <span className="text-green-400 font-medium">UI/UX Design</span>,{" "}
+                <span className="text-green-400 font-medium">Software Quality Assurance</span>,{" "}
                 <span className="text-green-400 font-medium">Mobile App Development</span>, and{" "}
                 <span className="text-green-400 font-medium">Full-Stack Web Development</span>.
               </p>
@@ -58,30 +60,29 @@ export default function AboutContent() {
             ),
           },
           {
-            title: "Experience",
-            body: (
-              <p className="text-lg leading-relaxed mt-4 max-w-4xl">
-                My experience includes working on projects like an AR-based property discovery app, a job portal
-                system, and an interactive learning platform for children with autism. I focus on delivering
-                high-quality, accessible, and engaging user experiences.
-              </p>
-            ),
-          },
-          {
             title: "Education",
             body: (
               <div className="flex items-start gap-4 mt-2">
-                
                 <div>
                   <p className="text-white font-semibold text-base">
-                    B.Sc. in Computer Science &amp; Engineering
+                    {education.degree} · CGPA: {education.cgpa}
                   </p>
                   <p className="text-green-700 text-sm font-medium mt-0.5">
-                    Islamic University of Technology (IUT)
+                    {education.institution}
                   </p>
                   <p className="text-gray-500 text-sm mt-0.5">
-                    OIC, Board Bazar, Gazipur, Bangladesh
+                    {education.location} &middot; {education.duration}
                   </p>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {education.coursework.map((course) => (
+                      <span
+                        key={course}
+                        className="text-xs bg-green-500/10 text-gray-300 px-2 py-1 rounded"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ),

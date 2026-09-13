@@ -15,8 +15,10 @@ const fadeUp = (delay: number) => ({
 });
 
 const ROLES = [
-  "UI/UX Designer",
+  "Software Engineer",
   "Mobile App Developer",
+  "QA Engineer",
+  "UI/UX Designer",
 ];
 
 function TypingRole() {

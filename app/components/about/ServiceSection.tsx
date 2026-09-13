@@ -51,6 +51,12 @@ const services = [
     tools: ["React Native", "Flutter"],
     features: ["Cross-platform UI", "Performance optimization", "App store readiness"],
   },
+  {
+    title: "Quality Assurance & Testing",
+    description: "Manual QA for web and mobile products across the full release cycle",
+    tools: ["Manual Testing", "Regression Testing"],
+    features: ["Functional Testing", "UI/UX Testing", "Bug Tracking", "Cross-device Testing"],
+  },
 
 ];
 

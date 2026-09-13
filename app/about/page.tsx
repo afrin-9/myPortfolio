@@ -1,4 +1,5 @@
 import AboutContent from "../components/about/AboutContent";
+import Experience from "../components/about/experience";
 import Frameworks from "../components/about/framework";
 import Projects from "../components/about/project";
 import ServicesSection from "../components/about/ServiceSection";
@@ -18,6 +19,7 @@ export default function AboutPage() {
       <AboutContent />
        <Skills />
       <Frameworks />
+      <Experience />
       <Projects />
       <ServicesSection />
        <Footer />
